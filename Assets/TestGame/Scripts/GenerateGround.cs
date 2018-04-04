@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GenerateGround : MonoBehaviour
 {
-    public GameObject[] floorTiles;
+    public GameObject[] FloorTiles;
 
     private Transform tilesHolder;
 
@@ -13,12 +11,13 @@ public class GenerateGround : MonoBehaviour
     {
         tilesHolder = new GameObject("FloorTiles").transform;
 
-        for (int x = -50; x < 50; x++)
+        
+        for (var x = -50; x < 50; x++)
         {
-            for (int y = -50; y < 50; y++)
+            for (var y = -50; y < 50; y++)
             {
-                var toInstantiate = floorTiles[Random.Range(0, floorTiles.Length)];
-
+                var index = Random.Range(0, FloorTiles.Length);
+                var toInstantiate = FloorTiles[index];
 
                 var instance =
                     Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity);
@@ -37,8 +36,8 @@ public class GenerateGround : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         
 
     }
+
 }

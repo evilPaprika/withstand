@@ -8,9 +8,11 @@ public class PlayerMovement : MovingObject
 
     public float moveSpeed;
 
+
 	// Use this for initialization
 	void Start ()
 	{
+
 	}
 
     protected override void OnCantMove<T>(T component)
