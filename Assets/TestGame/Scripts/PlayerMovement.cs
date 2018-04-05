@@ -22,7 +22,6 @@ public class PlayerMovement : MovingObject
 
     // Update is called once per frame
 	void Update () {
-		transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed,
-            Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed, 0f);
+		transform.Translate(new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical") , 0f).normalized * Time.deltaTime * moveSpeed);
 	}
 }
