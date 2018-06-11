@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace Completed
 {
-	//Player inherits from MovingObject, our base class for objects that can move, Enemy also inherits from this.
+	//Player inherits from MovingObject, our base class for objects that can move, enemyRB also inherits from this.
 	public class Player : MovingObject
 	{
 		public float restartLevelDelay = 1f;		//Delay time in seconds to restart level.

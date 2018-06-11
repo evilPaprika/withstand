@@ -20,7 +20,7 @@ namespace Completed
 		private GameObject levelImage;							//Image to block out level as levels are being set up, background for levelText.
 		private BoardManager boardScript;						//Store a reference to our BoardManager which will set up the level.
 		private int level = 1;									//Current level number, expressed in game as "Day 1".
-		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
+		private List<Enemy> enemies;							//List of all enemyRB units, used to issue them move commands.
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
 		private bool doingSetup = true;							//Boolean to check if we're setting up board, prevent Player from moving during setup.
 		
@@ -44,7 +44,7 @@ namespace Completed
 			//Sets this to not be destroyed when reloading scene
 			DontDestroyOnLoad(gameObject);
 			
-			//Assign enemies to a new List of Enemy objects.
+			//Assign enemies to a new List of enemyRB objects.
 			enemies = new List<Enemy>();
 			
 			//Get a component reference to the attached BoardManager script
@@ -92,7 +92,7 @@ namespace Completed
 			//Call the HideLevelImage function with a delay in seconds of levelStartDelay.
 			Invoke("HideLevelImage", levelStartDelay);
 			
-			//Clear any Enemy objects in our List to prepare for next level.
+			//Clear any enemyRB objects in our List to prepare for next level.
 			enemies.Clear();
 			
 			//Call the SetupScene function of the BoardManager script, pass it current level number.
@@ -124,10 +124,10 @@ namespace Completed
 			StartCoroutine (MoveEnemies ());
 		}
 		
-		//Call this to add the passed in Enemy to the List of Enemy objects.
+		//Call this to add the passed in enemyRB to the List of enemyRB objects.
 		public void AddEnemyToList(Enemy script)
 		{
-			//Add Enemy to List enemies.
+			//Add enemyRB to List enemies.
 			enemies.Add(script);
 		}
 		
@@ -161,13 +161,13 @@ namespace Completed
 				yield return new WaitForSeconds(turnDelay);
 			}
 			
-			//Loop through List of Enemy objects.
+			//Loop through List of enemyRB objects.
 			for (int i = 0; i < enemies.Count; i++)
 			{
-				//Call the MoveEnemy function of Enemy at index i in the enemies List.
+				//Call the MoveEnemy function of enemyRB at index i in the enemies List.
 				enemies[i].MoveEnemy ();
 				
-				//Wait for Enemy's moveTime before moving next Enemy, 
+				//Wait for enemyRB's moveTime before moving next enemyRB, 
 				yield return new WaitForSeconds(enemies[i].moveTime);
 			}
 			//Once Enemies are done moving, set playersTurn to true so player can move.
