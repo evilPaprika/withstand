@@ -4,3 +4,4 @@
 
 Точки расширения:  
 [Creature.cs](Assets/Scripts/Models/Creatures/Creature.cs)
+[Enemy.cs](Assets/Scripts/Models/Creatures/Enemy.cs)
