@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Player : ICreature
+public class Player : Creature
 {
     public const int MaxSatiety = 100;
     public int CurrentSatiety { get; private set; }

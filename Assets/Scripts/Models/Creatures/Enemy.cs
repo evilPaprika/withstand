@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-public abstract class Enemy : ICreature
+public abstract class Enemy : Creature
 {
     public float AttackDistance; // attacking area
 

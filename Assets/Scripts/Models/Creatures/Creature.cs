@@ -1,11 +1,10 @@
 ﻿using UnityEngine.Networking;
 
-public abstract class ICreature : NetworkBehaviour
+public abstract class Creature : NetworkBehaviour
 {
     public int Damage;
     public int Armor;
     public int Health { get { return GetComponent<Health>().CurrentHealth; } }
-    
     public float MoveSpeed;
     public float AttackDelay;
 
@@ -36,7 +35,7 @@ public abstract class ICreature : NetworkBehaviour
         return Health <= 0;
     }
     
-    public virtual void TakeDamage(int amount, ICreature creature)
+    public virtual void TakeDamage(int amount, Creature creature)
     {
         creature.GetDamage(amount);
     }
