@@ -3,12 +3,27 @@
 
 Члены проекта: Белоруссова Юлия, Зелинский Дмитрий, Ильиных Иван.
 
-Точки расширения:  
-1. [Creature.cs](Assets/Scripts/Models/Creatures/Creature.cs)  //  создание новых, возможно, нейтральных персонажей;
-2. [Enemy.cs](Assets/Scripts/Models/Creatures/Enemy.cs)  // создание новых вражеских существ;
-3. [Item.cs](Assets/Scripts/Models/Item.cs)  // создание новых вещей (оружие, броня и прочее).
+### Игры которыми мы вдохновлялись
+  - Cataclysm DDA
+  - Hotline Miami
+  - Factorio
+  - Survivio
+  - Devil Daggers
+  - Project Zomboid
+ 
+### Суть игры
+  Обороняться против орд зомби и попутно не умереть с голоду, выжить
+
+### Точки расширения  
+  - [Creature.cs](Assets/Scripts/Models/Creatures/Creature.cs)  //  создание новых, возможно, нейтральных персонажей;
+  - [Enemy.cs](Assets/Scripts/Models/Creatures/Enemy.cs)  // (наследник от Creature) создание новых вражеских существ;
+  - [Item.cs](Assets/Scripts/Models/Item.cs)  // создание новых вещей (оружие, броня и прочее).
 
 
 DI-Containers:
 DI-Container'ы в Unity используются редко, и в данной задаче их использование излишнее. Injection Dependency - это инверсия шаблона управления. Unity опирается на компонентный шаблон, в котором используется шаблон Service Locator, который также является инверсией шаблона управления.
 GetComponent, FindObjectOfType - примеры использования Service Locator.
+
+### Общая структура решения
+Движок Unity частично уже предоставляет модель структуры. Например [сцены](Assets/Scenes) предоставляют возможность cодержать в себе игровые объекты и элементы интерфейса.
+Основная часть логики это [скрипты](Assets/Scripts), которые позволяют задать взаиможействия между игровыми обектами, или сделать желаемый функционал.
