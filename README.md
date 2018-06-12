@@ -6,10 +6,11 @@
 ### Игры которыми мы вдохновлялись
   - Cataclysm DDA
   - Hotline Miami
-  - Factorio
+  - Let4Dead
   - Survivio
   - Devil Daggers
   - Project Zomboid
+  - Factorio
  
 ### Суть игры
   Обороняться против орд зомби и попутно не умереть с голоду, выжить
