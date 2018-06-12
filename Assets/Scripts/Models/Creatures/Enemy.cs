@@ -15,7 +15,6 @@ public abstract class Enemy : Creature
 
     protected void Start()
     {
-        Debug.Log("I have started");
         rb = GetComponent<Rigidbody2D>();
         nwm = FindObjectOfType<CustomNetworkManager>();
         StartCoroutine(FindPath());

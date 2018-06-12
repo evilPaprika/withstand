@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : Creature
 {
-    public const int MaxSatiety = 100;
-    public int CurrentSatiety { get; private set; }
-    public const int MaxThirst = 100;
-    public int CurrentThirst { get; private set; }
-    
-    public GameObject GUISystem;
+//    public int CurrentSatiety { get {return GUISystem.GetComponentInChildren<SliderHandler>().CurrentPoint; } }
+//    public int CurrentThirst { get { return GUISystem.GetComponentInChildren<SliderHandler>().CurrentPoint; } }
+
+    public GameObject LocalCanvas;
     public GameObject Enemy1; // for testing
     public GameObject Enemy2; // for testing
     public GameObject ActiveWeapon;
@@ -21,7 +17,7 @@ public class Player : Creature
 
     //private Inventory inventory;
 
-    void Start()
+    protected void Start()
     {
         nwm = FindObjectOfType<CustomNetworkManager>();
         nwm.players.Add(this);
@@ -30,19 +26,16 @@ public class Player : Creature
         if (!isLocalPlayer)
             return;
 
-        GUISystem = Instantiate(GUISystem);
-        GUISystem.transform.parent = transform;
+//        LocalCanvas = Instantiate(LocalCanvas);
+//        LocalCanvas.transform.parent = transform;
 
         //inventory = GetComponent<Inventory>();
-        CurrentSatiety = MaxSatiety;
-        CurrentThirst = MaxThirst;
 
-        StartCoroutine(ChangeSatietyLevel());
-        StartCoroutine(ChangeThirstLevel());
-        weapon = ActiveWeapon.GetComponentInChildren<WeaponItem>();
+//        StartCoroutine(ChangeSatietyLevel());
+//        StartCoroutine(ChangeThirstLevel());
     }
 
-    void Update()
+    protected void Update()
     {
         if (!isLocalPlayer)
             return;
@@ -50,7 +43,6 @@ public class Player : Creature
         if (IsDead())
         {
             Debug.Log("Dead!");
-            //Destroy(this, 0.2f);
             Destroy(gameObject, 0.2f);
             OnNetworkDestroy();
         }
@@ -58,7 +50,8 @@ public class Player : Creature
 
     public override bool IsDead()
     {
-        return Health <= 0 || CurrentSatiety <= 0;
+        return false;
+//        return Health <= 0 || CurrentSatiety <= 0 || CurrentThirst <= 0;
     }
 
     public override void OnNetworkDestroy()
@@ -67,25 +60,25 @@ public class Player : Creature
         base.OnNetworkDestroy();
     }
 
-    private IEnumerator ChangeSatietyLevel()
-    {
-        while (true)
-        {
-            if (nwm.players.Count == 0) break;
-            CurrentSatiety--;
-            //Debug.Log("Satiety amount: " + CurrentSatiety);
-            yield return new WaitForSeconds(7f);
-        }
-    }
-
-    private IEnumerator ChangeThirstLevel()
-    {
-        while (true)
-        {
-            if (nwm.players.Count == 0) break;
-            CurrentThirst--;
-            //Debug.Log("Thirst amount: " + CurrentThirst);
-            yield return new WaitForSeconds(10f);
-        }
-    }
+//    private IEnumerator ChangeSatietyLevel()
+//    {
+//        while (true)
+//        {
+//            if (nwm.players.Count == 0) break;
+//            GUISystem.GetComponentInChildren<SliderHandler>().Decrease(1);
+//            Debug.Log("Satiety amount: " + CurrentSatiety);
+//            yield return new WaitForSeconds(7f);
+//        }
+//    }
+//
+//    private IEnumerator ChangeThirstLevel()
+//    {
+//        while (true)
+//        {
+//            if (nwm.players.Count == 0) break;
+//            GUISystem.GetComponentInChildren<SliderHandler>().Decrease(1);
+//            Debug.Log("Thirst amount: " + CurrentThirst);
+//            yield return new WaitForSeconds(10f);
+//        }
+//    }
 }

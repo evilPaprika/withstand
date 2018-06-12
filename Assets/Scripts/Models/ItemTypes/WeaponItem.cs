@@ -2,7 +2,7 @@
 
 public class WeaponItem : Item
 {
-    public int Damage = 10;
+    public int Damage;
     public GameObject Projectile;
 
     public override void BeUsed()

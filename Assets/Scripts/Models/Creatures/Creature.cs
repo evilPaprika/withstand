@@ -42,6 +42,6 @@ public abstract class Creature : NetworkBehaviour
 
     public virtual void GetDamage(int amount)
     {
-        GetComponent<Health>().TakeDamage(amount - Armor * DamageAbsorptionCoef);
+        GetComponentInChildren<Health>().TakeDamage(amount - Armor * DamageAbsorptionCoef);
     }
 }

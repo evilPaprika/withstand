@@ -7,11 +7,12 @@ public class WizardZombie : Enemy
 
     protected new virtual void Start()
     {
+        //TODO
         Cost = 12;
         Damage = 20;
         Armor = 0;
         MoveSpeed = 1;
-        AttackDelay = 5f;
+        AttackDelay = 3f;
         AttackDistance = 5f;
         base.Start();
     }
