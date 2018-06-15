@@ -22,7 +22,6 @@ public class MenuItems : MonoBehaviour
             ti.spriteImportMode = SpriteImportMode.Multiple;
             List<SpriteMetaData> newData = new List<SpriteMetaData>();
             int SliceWidth = 100000;
-            print(texture.name);
             if (texture.name.EndsWith("leaves"))
                  SliceWidth = (int)(texture.width / 3f);
             else if (texture.name.EndsWith("trunk"))
@@ -31,10 +30,8 @@ public class MenuItems : MonoBehaviour
             }
             else
             {
-                print("WTF?");
                 continue;
             }
-            print("test");
             int SliceHeight = texture.height;
             int n = 0;
             for (int i = 0; i < texture.width; i += SliceWidth)

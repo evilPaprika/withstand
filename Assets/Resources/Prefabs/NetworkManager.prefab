@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4829325908835288}
-  - component: {fileID: 114732688406132842}
+  - component: {fileID: 114916812358798150}
   - component: {fileID: 114455082142403006}
   m_Layer: 0
   m_Name: NetworkManager
@@ -56,7 +56,7 @@ MonoBehaviour:
   showGUI: 1
   offsetX: 0
   offsetY: 0
---- !u!114 &114732688406132842
+--- !u!114 &114916812358798150
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1640219849078298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed4dde09d3f3cb24a8cf5c989b05abca, type: 3}
+  m_Script: {fileID: -822479833, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_NetworkPort: 7777
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 1021922965008300, guid: 856cca7bba7a78545a51c4830e0ef70c,
+  m_PlayerPrefab: {fileID: 1079414890004000, guid: 97852f9d1b6d7a74fb5cd0ee96c4ade4,
     type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
@@ -86,6 +86,18 @@ MonoBehaviour:
   - {fileID: 1627751317205888, guid: e94e1d339efcefa44bb14042a91b98f4, type: 2}
   - {fileID: 1108175859388004, guid: 9ac6637a46ed16442a78bd72ce8db3e7, type: 2}
   - {fileID: 1916942424271344, guid: eeba9ba0a44677845b58b65d814419e9, type: 2}
+  - {fileID: 1031936450960302, guid: 3596a3932d7a43b41887379748fc711e, type: 2}
+  - {fileID: 1483323596405726, guid: 877e1e4a526fa084ba74e10691ffb369, type: 2}
+  - {fileID: 1918488669043580, guid: 129d8a4eb51e05e4cb758931318332d7, type: 2}
+  - {fileID: 1722357556188068, guid: 2ad7b6985cb396944b9d802663f3a4b1, type: 2}
+  - {fileID: 1174716451367042, guid: 93ab47603289bae48acac7f1df96f44b, type: 2}
+  - {fileID: 1468406356884968, guid: 316a01ef2e9cc50458557e31168d1a5b, type: 2}
+  - {fileID: 1678824149986676, guid: b35af82c532054641bea948a90b2c784, type: 2}
+  - {fileID: 1555428665047166, guid: 6f6b771be36f9fc4fa5dc7d031cebbc8, type: 2}
+  - {fileID: 1019819560091734, guid: 0610a241278d89a41bf293ba40bf662c, type: 2}
+  - {fileID: 1777076908534374, guid: 17f0b16dcedfa0146bb1b5698c2d2e18, type: 2}
+  - {fileID: 1448731146820030, guid: e1f881f580d98cb4397245b554869ece, type: 2}
+  - {fileID: 1286446915820570, guid: c3c1d80095d8bb548ab63917749ce581, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:

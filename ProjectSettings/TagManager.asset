@@ -9,6 +9,7 @@ TagManager:
   - Food
   - Inventory
   - Soda
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - BlockingLayer
   - Inventory
-  - 
+  - Box
   - 
   - 
   - 
@@ -63,4 +64,7 @@ TagManager:
     locked: 0
   - name: Inventory
     uniqueID: 823278147
+    locked: 0
+  - name: Box
+    uniqueID: 3265345041
     locked: 0
