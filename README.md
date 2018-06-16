@@ -24,7 +24,7 @@
   - [SliderHandler.cs](Assets/Scripts/GUI/SliderHandler.cs)  // навешивается на любой слайдер, и его становится легко изменять;
   - [Indicator.cs](Assets/Scripts/Creatures/Indicator.cs)  // индикатор состояния объекта, можно сделать сколько угодно для одного объекта;
   - [Projectile.cs](Assets/Scripts/Items/Weapons/Projectiles/Projectile.cs)  // описывает абстрактный метательный снаряд
-  - [WeaponItem.cs](Assets/Scripts/Items/ItemTypes/WeaponItem.cs)  // абстактное оружее
+  - [WeaponItem.cs](Assets/Scripts/Items/ItemTypes/WeaponItem.cs)  // абстрактное оружие
 
 ### DI-Containers:
 DI-Container'ы в Unity используются редко, и в данной задаче их использование излишнее. Injection Dependency - это инверсия шаблона управления. Unity опирается на компонентный шаблон, в котором используется шаблон Service Locator, который также является инверсией шаблона управления.
