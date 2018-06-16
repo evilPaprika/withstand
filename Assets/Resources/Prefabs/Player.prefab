@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 2
-  m_SendInterval: 0.05
+  m_SendInterval: 0.09090909
   m_SyncRotationAxis: 3
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Target: {fileID: 4444401475997894}
   m_ChildIndex: 0
-  m_SendInterval: 0.1
+  m_SendInterval: 0.14285715
   m_SyncRotationAxis: 3
   m_RotationSyncCompression: 0
   m_MovementThreshold: 0.001
@@ -1753,10 +1753,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioClips:
-  - {fileID: 8300000, guid: 17110af40887a4048b45655a1ce864e5, type: 3}
-  - {fileID: 8300000, guid: 4bed58ab9667de141bc92305ec8c5a0c, type: 3}
-  - {fileID: 8300000, guid: 0d4f7dcc1cf4cca4aa404d81169c3fdf, type: 3}
-  - {fileID: 8300000, guid: b22765f079f7b4c4fa3fb187b54b81b7, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Volume: 1
 --- !u!114 &114853581197315076
 MonoBehaviour:

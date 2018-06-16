@@ -48,39 +48,40 @@ public class Controller : NetworkBehaviour
     public void CmdTakeFood()
     {
         RpcTakeFood(30);
-        NetworkServer.Destroy(TriggeredItem);
     }
 
     [ClientRpc]
     public void RpcTakeFood(int amount)
     {
         player.AddSatiety(amount);
+        NetworkServer.Destroy(TriggeredItem);
+
     }
 
     [Command]
     public void CmdTakeDrink()
     {
         RpcTakeDrink(30);
-        NetworkServer.Destroy(TriggeredItem);
     }
 
     [ClientRpc]
     public void RpcTakeDrink(int amount)
     {
         player.AddThirst(amount);
+        NetworkServer.Destroy(TriggeredItem);
     }
 
     [Command]
     public void CmdPickUpBandages()
     {
         RpcAddHealth(30);
-        NetworkServer.Destroy(TriggeredItem);
     }
 
     [ClientRpc]
     public void RpcAddHealth(int amount)
     {
         player.AddHealth(amount);
+        NetworkServer.Destroy(TriggeredItem);
     }
 
 

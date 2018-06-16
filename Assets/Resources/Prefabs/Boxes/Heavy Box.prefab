@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxValue: 100
+  CurrentValue: 0
   SliderHandler: {fileID: 114890038990157548}
 --- !u!114 &114101980820841780
 MonoBehaviour:
@@ -250,7 +251,7 @@ MonoBehaviour:
   - {fileID: 114540152970928214, guid: 3596a3932d7a43b41887379748fc711e, type: 2}
   - {fileID: 114986690783298144, guid: e1f881f580d98cb4397245b554869ece, type: 2}
   - {fileID: 114770932977600164, guid: c3c1d80095d8bb548ab63917749ce581, type: 2}
-  Chances: 2800000028000000140000000a0000000f00000005000000
+  Chances: 6400000064000000460000001e0000003200000014000000
 --- !u!114 &114444396318630346
 MonoBehaviour:
   m_ObjectHideFlags: 1

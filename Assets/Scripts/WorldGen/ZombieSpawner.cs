@@ -21,6 +21,12 @@ public class ZombieSpawner : Generator
     {
         while (true)
         {
+            if (GameObject.FindGameObjectsWithTag("Enemy").Length > 100)
+            {
+                yield return new WaitForSeconds(1f);
+                continue;
+            }
+
             Vector2[] playerPositions =
                 FindObjectsOfType<Player>().Select(x => x.GetComponent<Rigidbody2D>().position).ToArray();
             var secondsPassed = DateTime.Now.Subtract(World.GetComponent<World>().startTime).Seconds;
@@ -40,7 +46,7 @@ public class ZombieSpawner : Generator
                     NetworkServer.Spawn(instance);
                 }
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
         }
     }
 

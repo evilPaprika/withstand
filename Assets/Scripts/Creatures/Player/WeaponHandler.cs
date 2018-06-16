@@ -10,7 +10,7 @@ public class WeaponHandler : NetworkBehaviour
 
     private Player player;
 
-    protected void Start()
+    void Awake()
     {
         player = GetComponent<Player>();
         player.Weapon = Fists.GetComponent<WeaponItem>();
