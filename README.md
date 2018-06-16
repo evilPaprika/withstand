@@ -16,10 +16,15 @@
   Выживать вместе с товарищами, обороняясь от орд зомби, искать еду, чтобы не умереть с голоду.
 
 ### Точки расширения  
-  - [Creature.cs](Assets/Scripts/Models/Creatures/Creature.cs)  //  создание новых, возможно, нейтральных персонажей;
-  - [Enemy.cs](Assets/Scripts/Models/Creatures/Enemy.cs)  // (наследник от Creature) создание новых вражеских существ;
-  - [Item.cs](Assets/Scripts/Models/Item.cs)  // создание новых вещей (оружие, броня и прочее).
-
+  - [Creature.cs](Assets/Scripts/Creatures/Creature.cs)  //  создание новых, возможно, нейтральных персонажей;
+  - [Enemy.cs](Assets/Scripts/Creatures/Enemy.cs)  // (наследник от Creature) создание новых вражеских существ;
+  - [Item.cs](Assets/Scripts/Items/Item.cs)  // создание новых вещей (оружие, броня и прочее);
+  - [Generator.cs](Assets/Scripts/WorldGen/Generator.cs)  // генератор объектов мира;
+  - [PickUps.cs](Assets/Scripts/Items/PickUps.cs)  // абстрактный класс описываюший поднимаемые объекты;
+  - [SliderHandler.cs](Assets/Scripts/GUI/SliderHandler.cs)  // навешивается на любой слайдер, и его становится легко изменять;
+  - [Indicator.cs](Assets/Scripts/Creatures/Indicator.cs)  // индикатор состояния объекта, можно сделать сколько угодно для одного объекта;
+  - [Projectile.cs](Assets/Scripts/Items/Weapons/Projectiles/Projectile.cs)  // описывает абстрактный метательный снаряд
+  - [WeaponItem.cs](Assets/Scripts/Items/ItemTypes/WeaponItem.cs)  // абстактное оружее
 
 ### DI-Containers:
 DI-Container'ы в Unity используются редко, и в данной задаче их использование излишнее. Injection Dependency - это инверсия шаблона управления. Unity опирается на компонентный шаблон, в котором используется шаблон Service Locator, который также является инверсией шаблона управления.
